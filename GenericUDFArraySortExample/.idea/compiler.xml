@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="BlogCode" />
+        <module name="GenericUDFArraySortExample" />
       </profile>
     </annotationProcessing>
   </component>
