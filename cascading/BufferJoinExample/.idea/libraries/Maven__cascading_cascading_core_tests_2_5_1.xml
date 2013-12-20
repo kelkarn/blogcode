@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cascading:cascading-core:tests:2.5.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cascading/cascading-core/2.5.1/cascading-core-2.5.1-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cascading/cascading-core/2.5.1/cascading-core-2.5.1-test-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cascading/cascading-core/2.5.1/cascading-core-2.5.1-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

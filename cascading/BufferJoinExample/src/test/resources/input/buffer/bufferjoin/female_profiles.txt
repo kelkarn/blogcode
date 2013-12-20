@@ -1,0 +1,5 @@
+name,age,salary
+Jane,22,52000
+Marissa,26,60000
+Priya,28,50000
+Ruth,30,70000

@@ -1,0 +1,5 @@
+name,age,salary
+John,24,55000
+Kumar,27,67000
+Aaron,25,70000
+Levon,31,75000
