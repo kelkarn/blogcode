@@ -40,7 +40,8 @@ public class BufferJoinExampleTest {
         Tap recommendedMatchSink =  new FileTap(new TextDelimited(true, DELIMITER), outputPath + "matches.txt", SinkMode.REPLACE);
 
         // create flow def
-        FlowDef bufferJoinTestFlowDef = BufferJoinExample.createFlowDefUsing(maleProfileSource, femaleProfileSource, recommendedMatchSink);
+        FlowDef bufferJoinTestFlowDef = BufferJoinExample.createFlowDefUsing(maleProfileSource, femaleProfileSource,
+                                                                             recommendedMatchSink);
 
         new LocalFlowConnector().connect(bufferJoinTestFlowDef).complete(); // run the flow
 
