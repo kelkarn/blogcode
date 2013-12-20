@@ -18,6 +18,11 @@ import org.nkelkar.buffer.CustomJoin;
  * Date: 12/20/13
  * Time: 11:25 AM
  */
+
+/**
+ * This class implements the business logic of a simple recommender system
+ * for an online matrimonial website.
+ */
 public class BufferJoinExample {
 
     // these are the only fields that both data files contain
@@ -27,7 +32,17 @@ public class BufferJoinExample {
     private static final String MALE_NAMESPACE = "_male";
     private static final String FEMALE_NAMESPACE = "_female";
 
-    public static FlowDef createFlowDefUsing(Tap<?, ?, ?> maleProfileSource, Tap<?, ?, ?> femaleProfileSource, Tap<?, ?, ?> recommendedMatchSink) {
+    /**
+     * This method defines the sequence of data operations required
+     * for this Cascading flow.
+     *
+     * @param maleProfileSource     source tap in src/test/resources/input/buffer/bufferjoin/male_profiles.txt
+     * @param femaleProfileSource   source tap in src/test/resources/input/buffer/bufferjoin/female_profiles.txt
+     * @param recommendedMatchSink  sink tap in src/test/resources/output/buffer/bufferjoin/matches.txt
+     * @return                      Flow definition that a FlowConnector needs to run
+     */
+    public static FlowDef createFlowDefUsing(Tap<?, ?, ?> maleProfileSource, Tap<?, ?, ?> femaleProfileSource,
+                                             Tap<?, ?, ?> recommendedMatchSink) {
 
         // create pipes to connect to sources
         Pipe males = new Pipe("male_profiles");
@@ -50,6 +65,7 @@ public class BufferJoinExample {
 
         matches = new Each(matches, new Debug(true));   // print out results to console
 
+        //connect sources, sinks and return
         return FlowDef.flowDef()
                       .addSource(males, maleProfileSource)
                       .addSource(females, femaleProfileSource)
